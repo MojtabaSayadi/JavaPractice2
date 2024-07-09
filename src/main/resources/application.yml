@@ -1,1 +1,14 @@
-spring.application.name=p2
+spring:
+  application:
+    name: p2
+  datasource:
+    url: jdbc:postgresql://localhost:5432/practice
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: 6060
