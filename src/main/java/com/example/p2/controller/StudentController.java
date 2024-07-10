@@ -36,11 +36,11 @@ public class StudentController {
         studenteRepository.deleteById(id);
 
     }
-/*
+
     @PutMapping("{id}")
     public Student update(@PathVariable("id") Long id, @RequestBody Student studentRequest) {
         return  studentService.update(id, studentRequest);
     }
 
-*/
+
 }
