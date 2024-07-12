@@ -24,16 +24,18 @@ public class StudentController {
     }
     @GetMapping("{id}")
     public Student findStudentById(@PathVariable("id") Long id) {
-        return studenteRepository.findById(id).get();
+      // return studenteRepository.findById(id).get();
+        return studentService.studentFindById(id);
     }
     @PostMapping
     public Student save(@RequestBody Student student){
-
-        return studenteRepository.save(student);
+        return studentService.saveStudent(student);
+       // return studenteRepository.save(student);
     }
     @DeleteMapping("{id}")
     public void delete(@PathVariable("id") Long id){
-        studenteRepository.deleteById(id);
+     //   studentService.deleteById(id);
+      studenteRepository.deleteById(id);
 
     }
 

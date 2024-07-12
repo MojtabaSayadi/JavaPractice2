@@ -11,6 +11,15 @@ public class StudentService {
 @Autowired
     private StudenteRepository studenteRepository;
 
+    public Student studentFindById(Long id){
+      return studenteRepository.findById(id).get();
+}
+    public Student saveStudent(Student student){
+    return studenteRepository.save(student);
+}
+    public void deleteById(Long id){
+        studenteRepository.deleteById(id);
+    }
     public Student update(long id, Student studentrequest) {
         Student studentData = studenteRepository.findById(id).get();
 
