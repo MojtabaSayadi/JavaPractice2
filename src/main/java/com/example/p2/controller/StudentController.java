@@ -1,10 +1,9 @@
 package com.example.p2.controller;
 
 import com.example.p2.model.Student;
-import com.example.p2.repository.StudenteRepository;
+import com.example.p2.repository.StudentRepository;
 import com.example.p2.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,14 +12,14 @@ import java.util.List;
 @RequestMapping("student")
 public class StudentController {
     @Autowired
-    StudenteRepository studenteRepository;
-
+    StudentRepository studentRepository;
+   @Autowired
     StudentService  studentService;
 
     @GetMapping
     public List<Student> studentList(){
 
-        return studenteRepository.findAll();
+        return studentService.studentList();
     }
     @GetMapping("{id}")
     public Student findStudentById(@PathVariable("id") Long id) {
@@ -35,7 +34,7 @@ public class StudentController {
     @DeleteMapping("{id}")
     public void delete(@PathVariable("id") Long id){
      //   studentService.deleteById(id);
-      studenteRepository.deleteById(id);
+      studentRepository.deleteById(id);
 
     }
 
