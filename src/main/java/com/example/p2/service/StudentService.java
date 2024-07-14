@@ -28,8 +28,8 @@ public class StudentService {
         studentRepository.deleteById(id);
     }
     public Student update(long id, Student studentrequest) {
-       Student studentData = studentRepository.findById(id).get();
-       // if (studentData.isPresent()) {
+      Student studentData = studentRepository.findById(id).get();
+      // if (studentData.isPresent()) {
             if (studentrequest.getFirstName() != null) {
                 studentData.setFirstName(studentrequest.getFirstName());
             }
@@ -42,5 +42,5 @@ public class StudentService {
             return studentRepository.save(studentData);
         }
        // return null;
-    //}
+   // }
 }

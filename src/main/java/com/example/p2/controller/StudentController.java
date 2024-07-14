@@ -11,8 +11,10 @@ import java.util.List;
 @RestController
 @RequestMapping("student")
 public class StudentController {
+   /*
     @Autowired
     StudentRepository studentRepository;
+   */
    @Autowired
     StudentService  studentService;
 
@@ -33,8 +35,8 @@ public class StudentController {
     }
     @DeleteMapping("{id}")
     public void delete(@PathVariable("id") Long id){
-     //   studentService.deleteById(id);
-      studentRepository.deleteById(id);
+        studentService.deleteById(id);
+      //studentRepository.deleteById(id);
 
     }
 

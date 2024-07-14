@@ -5,12 +5,12 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
-@Data
-@Entity
+@Data // encapsulation
+@Entity // create table in database
 @Table(name = "students")
 public class Student {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id // primary key
+    @GeneratedValue(strategy = GenerationType.AUTO) //generate value for id
     private Long id;
     @Size(max = 30)
     private String firstName;
