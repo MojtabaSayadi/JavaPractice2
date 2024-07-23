@@ -15,6 +15,7 @@ public class StudentService {
     private StudentRepository studentRepository;
 
     public List<Student> studentList(){
+
         return studentRepository.findAll();
     }
     public Student studentFindById(Long id){
