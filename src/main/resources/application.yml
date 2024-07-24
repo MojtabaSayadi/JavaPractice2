@@ -12,3 +12,7 @@ spring:
       ddl-auto: update
 server:
   port: 6060
+uni:
+  app:
+    jwtSecret: aaaarrrruuu
+    jwtExpirationMs: 360000

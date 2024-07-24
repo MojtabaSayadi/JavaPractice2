@@ -51,4 +51,10 @@ public class AuthController {
         return userRepository.save(user);
 
     }
+    //--------------------------------
+    @PostMapping("signin")
+    public String signin(@RequestBody User userLogin){
+
+        return "";
+    }
 }
